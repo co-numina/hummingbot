@@ -37,7 +37,7 @@ export default function EquityCurve() {
       ctx.clearRect(0, 0, width, height);
 
       // Grid lines
-      ctx.strokeStyle = "#1a1a1a";
+      ctx.strokeStyle = "#1a2540";
       ctx.lineWidth = 0.5;
       for (let i = 0; i < 5; i++) {
         const y = (i / 4) * height;
@@ -49,7 +49,7 @@ export default function EquityCurve() {
 
       // Equity line
       ctx.beginPath();
-      ctx.strokeStyle = "#00ff88";
+      ctx.strokeStyle = "#00e676";
       ctx.lineWidth = 1.5;
       data.forEach((val, i) => {
         const x = (i / (data.length - 1)) * width;
@@ -66,14 +66,14 @@ export default function EquityCurve() {
       ctx.lineTo(0, height);
       ctx.closePath();
       const grad = ctx.createLinearGradient(0, 0, 0, height);
-      grad.addColorStop(0, "rgba(0, 255, 136, 0.1)");
-      grad.addColorStop(1, "rgba(0, 255, 136, 0)");
+      grad.addColorStop(0, "rgba(0, 230, 118, 0.12)");
+      grad.addColorStop(1, "rgba(0, 230, 118, 0)");
       ctx.fillStyle = grad;
       ctx.fill();
 
       // Current value label
       const current = data[data.length - 1];
-      ctx.fillStyle = "#00ff88";
+      ctx.fillStyle = "#00e676";
       ctx.font = "bold 11px ui-monospace, monospace";
       ctx.textAlign = "right";
       ctx.fillText(`$${current.toFixed(0)}`, width - 4, lastY - 6);

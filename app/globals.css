@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0a0a0a;
-  --green: #00ff88;
-  --red: #ff4444;
-  --gray: #888;
-  --gray-dim: #444;
-  --gray-border: #1a1a1a;
-  --text: #ccc;
-  --text-bright: #eee;
+  --bg: #0b1120;
+  --bg-panel: #0e1528;
+  --green: #00e676;
+  --green-dim: #00c853;
+  --red: #ff5252;
+  --gray: #7b8ca8;
+  --gray-dim: #3d4b65;
+  --gray-border: #1a2540;
+  --text: #c0cce0;
+  --text-bright: #e8edf5;
 }
 
 * {
@@ -86,8 +88,8 @@ body {
 }
 
 .panel {
-  background: var(--bg);
-  padding: 16px;
+  background: var(--bg-panel);
+  padding: 20px;
   position: relative;
 }
 

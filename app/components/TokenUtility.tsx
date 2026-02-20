@@ -1,18 +1,65 @@
 export default function TokenUtility() {
+  const tiers = [
+    {
+      name: "Scout",
+      requirement: "1,000 $HBOT",
+      features: [
+        "Basic strategy configs (PMM, grid)",
+        "Community backtests",
+        "API access — 100 req/min",
+        "Public strategy vault",
+      ],
+    },
+    {
+      name: "Operator",
+      requirement: "10,000 $HBOT",
+      features: [
+        "All Scout features",
+        "Advanced strategies (Avellaneda-Stoikov, cross-exchange)",
+        "Priority parameter refresh (5min vs 30min)",
+        "API access — 500 req/min",
+        "Private Discord channel",
+      ],
+      highlight: true,
+    },
+    {
+      name: "Whale",
+      requirement: "100,000 $HBOT",
+      features: [
+        "All Operator features",
+        "Priority execution queue",
+        "Custom parameter tuning requests",
+        "Submit to Strategy Vault (earn per download)",
+        "API access — 2,000 req/min",
+        "Direct strategy consultation",
+      ],
+    },
+  ];
+
   return (
-    <section style={{ padding: "60px 20px", maxWidth: "900px", margin: "0 auto" }}>
+    <section style={{ padding: "56px 20px", maxWidth: "1000px", margin: "0 auto" }}>
       <h2
         style={{
           fontSize: "12px",
           textTransform: "uppercase",
           letterSpacing: "0.15em",
           color: "var(--gray)",
-          marginBottom: "40px",
+          marginBottom: "12px",
           textAlign: "center",
         }}
       >
-        Why $HBOT exists
+        Token Utility
       </h2>
+      <p
+        style={{
+          fontSize: "12px",
+          color: "var(--gray-dim)",
+          textAlign: "center",
+          marginBottom: "40px",
+        }}
+      >
+        Hold $HBOT to unlock strategy tiers. More tokens, more alpha.
+      </p>
 
       <div
         style={{
@@ -23,60 +70,52 @@ export default function TokenUtility() {
           border: "1px solid var(--gray-border)",
         }}
       >
-        {[
-          {
-            title: "Strategy Access",
-            desc: "Pay $HBOT to unlock premium strategy configurations. Backtested parameters for market making, arbitrage, and grid trading — optimized on Hummingbot's open-source framework.",
-            detail: "100 $HBOT / config",
-          },
-          {
-            title: "Priority Execution",
-            desc: "Stake $HBOT for priority queue placement. Your strategies execute first when network congestion spikes. Time advantage in high-frequency trading is everything.",
-            detail: "Stake 10K+ $HBOT",
-          },
-          {
-            title: "Strategy Vault",
-            desc: "Community-built strategies, peer-reviewed and audited. Contributors earn $HBOT when their configs are used. Aligns incentives between builders and traders.",
-            detail: "Earn per download",
-          },
-        ].map((item) => (
+        {tiers.map((tier) => (
           <div
-            key={item.title}
+            key={tier.name}
             style={{
-              background: "var(--bg)",
-              padding: "28px 24px",
+              background: tier.highlight ? "var(--bg-panel)" : "var(--bg)",
+              padding: "32px 24px",
+              borderTop: tier.highlight ? "2px solid var(--green)" : "2px solid transparent",
             }}
           >
             <div
               style={{
-                fontSize: "13px",
+                fontSize: "15px",
                 color: "var(--text-bright)",
                 fontWeight: 600,
-                marginBottom: "12px",
+                marginBottom: "6px",
               }}
             >
-              {item.title}
+              {tier.name}
             </div>
-            <p
-              style={{
-                fontSize: "12px",
-                lineHeight: "1.7",
-                color: "var(--gray)",
-                margin: "0 0 16px 0",
-              }}
-            >
-              {item.desc}
-            </p>
             <div
               style={{
-                fontSize: "10px",
+                fontSize: "11px",
                 color: "var(--green)",
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
+                marginBottom: "20px",
+                letterSpacing: "0.05em",
               }}
             >
-              {item.detail}
+              {tier.requirement}
             </div>
+            <ul
+              style={{
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+                fontSize: "11px",
+                lineHeight: "2",
+                color: "var(--gray)",
+              }}
+            >
+              {tier.features.map((f, i) => (
+                <li key={i} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                  <span style={{ color: "var(--green)", flexShrink: 0 }}>-</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>

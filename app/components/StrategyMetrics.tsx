@@ -50,7 +50,7 @@ export default function StrategyMetrics() {
                 display: "grid",
                 gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr",
                 padding: "4px 0",
-                borderBottom: "1px solid #111",
+                borderBottom: "1px solid var(--gray-border)",
               }}
             >
               <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>

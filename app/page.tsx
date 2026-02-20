@@ -4,6 +4,7 @@ import EquityCurve from "./components/EquityCurve";
 import StrategyMetrics from "./components/StrategyMetrics";
 import Origin from "./components/Origin";
 import TokenUtility from "./components/TokenUtility";
+import FAQ from "./components/FAQ";
 
 export default function Home() {
   return (
@@ -13,17 +14,17 @@ export default function Home() {
       {/* Hero */}
       <section
         style={{
-          padding: "60px 20px 40px",
+          padding: "72px 24px 56px",
           textAlign: "center",
           borderBottom: "1px solid var(--gray-border)",
         }}
       >
         <h1
           style={{
-            fontSize: "32px",
+            fontSize: "34px",
             fontWeight: 700,
             color: "var(--text-bright)",
-            margin: "0 0 12px 0",
+            margin: "0 0 16px 0",
             letterSpacing: "-0.02em",
           }}
         >
@@ -33,11 +34,11 @@ export default function Home() {
         </h1>
         <p
           style={{
-            fontSize: "13px",
+            fontSize: "14px",
             color: "var(--gray)",
-            maxWidth: "520px",
+            maxWidth: "540px",
             margin: "0 auto",
-            lineHeight: "1.7",
+            lineHeight: "1.8",
           }}
         >
           $HBOT tokenizes access to optimized trading strategies built on
@@ -50,7 +51,7 @@ export default function Home() {
       <Origin />
 
       {/* Terminal Grid */}
-      <section style={{ padding: "20px", maxWidth: "1200px", margin: "0 auto" }}>
+      <section style={{ padding: "24px", maxWidth: "1200px", margin: "0 auto" }}>
         <div className="grid-terminal">
           <OrderBook />
           <EquityCurve />
@@ -58,23 +59,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Token Utility */}
+      {/* Token Utility / Tiers */}
       <TokenUtility />
+
+      {/* FAQ */}
+      <FAQ />
 
       {/* Footer */}
       <footer
         style={{
-          padding: "32px 20px",
+          padding: "40px 24px",
           borderTop: "1px solid var(--gray-border)",
           textAlign: "center",
-          fontSize: "10px",
+          fontSize: "11px",
           color: "var(--gray-dim)",
         }}
       >
-        <div style={{ marginBottom: "8px" }}>
+        <div style={{ marginBottom: "10px" }}>
           $HBOT is a community token. Not affiliated with the Hummingbot Foundation.
         </div>
-        <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: "24px" }}>
           <a
             href="https://github.com/hummingbot/hummingbot"
             target="_blank"

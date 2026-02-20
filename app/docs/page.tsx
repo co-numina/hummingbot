@@ -89,7 +89,7 @@ export default function Docs() {
                       style={{
                         fontSize: "10px",
                         padding: "3px 8px",
-                        background: "#111",
+                        background: "var(--bg-panel)",
                         border: "1px solid var(--gray-border)",
                         color: "var(--text)",
                       }}
@@ -152,7 +152,7 @@ export default function Docs() {
           </h2>
           <pre
             style={{
-              background: "#111",
+              background: "var(--bg-panel)",
               border: "1px solid var(--gray-border)",
               padding: "20px",
               fontSize: "11px",

@@ -2,7 +2,7 @@ export default function Origin() {
   return (
     <section
       style={{
-        padding: "48px 20px",
+        padding: "56px 24px",
         borderBottom: "1px solid var(--gray-border)",
         textAlign: "center",
       }}
