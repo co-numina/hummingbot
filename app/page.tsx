@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import OrderBook from "./components/OrderBook";
 import EquityCurve from "./components/EquityCurve";
 import StrategyMetrics from "./components/StrategyMetrics";
+import TradeFeed from "./components/TradeFeed";
 import Origin from "./components/Origin";
 import TokenUtility from "./components/TokenUtility";
 import FAQ from "./components/FAQ";
@@ -56,6 +57,7 @@ export default function Home() {
           <OrderBook />
           <EquityCurve />
           <StrategyMetrics />
+          <TradeFeed />
         </div>
       </section>
 
