@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "$HBOT — The bot is open-source. The alpha is ours.",
+  title: "$HBOT — The bot is open-source. The edge isn't.",
   description: "Tokenized access to optimized trading strategies built on Hummingbot. Pay $HBOT for premium strategy configs, backtested parameters, and priority execution.",
   icons: {
     icon: "/favicon.svg",

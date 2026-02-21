@@ -31,7 +31,7 @@ export default function Home() {
         >
           The bot is open-source.
           <br />
-          <span style={{ color: "var(--green)" }}>The alpha is ours.</span>
+          <span style={{ color: "var(--green)" }}>The edge isn&apos;t.</span>
         </h1>
         <p
           style={{
